@@ -2,9 +2,10 @@ import threading
 import socket
 
 nickname = input("Choose a nickname: ")
+port = int(input("Choose a port: "))
 
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-client.connect(('127.0.0.1', 5555))
+client.connect(('127.0.0.1', port))
 
 def receive():
     while True:
